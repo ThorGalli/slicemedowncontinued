@@ -9,7 +9,7 @@ public class Score : MonoBehaviour {
     string score;
 
     private void Update() {
-        score = "Score: " + GameManager.Instance.getPoints().ToString();
+        score = GameManager.Instance.getPoints().ToString();
         gameObject.GetComponent<TextMeshProUGUI>().text = score;
     }
 

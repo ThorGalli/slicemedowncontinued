@@ -36,12 +36,12 @@ public class GameManager : MonoBehaviour {
     public void PlayerWon(int m) {
         points *= m;
         canvas.transform.Find("WinPannel").gameObject.SetActive(true);
-        canvas.transform.Find("PointIndicator").transform.Translate(new Vector3(0,-200,0));
+        canvas.transform.Find("PointIndicator").gameObject.SetActive(false);
 
     }
     public void PlayerLost() {
         canvas.transform.Find("DeathPannel").gameObject.SetActive(true);
-        canvas.transform.Find("PointIndicator").transform.Translate(new Vector3(0, -200, 0));
+        canvas.transform.Find("PointIndicator").gameObject.SetActive(false);
     }
 
 }
