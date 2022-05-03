@@ -8,7 +8,8 @@ public class PlayerBehaviour : MonoBehaviour{
     [SerializeField] float jumpForce=200;
     [SerializeField] float horizontalForce= 60;
     [SerializeField] float gravityCap = 10;
-    [SerializeField] GameObject deathPanel;
+    [SerializeField] AudioClip deathClip;
+    [SerializeField] AudioClip winClip;
 
     RigidbodyConstraints defaultConstraints;
     GameObject blade;
@@ -101,16 +102,29 @@ public class PlayerBehaviour : MonoBehaviour{
         }
     }
 
-
     public void justCut() {
         float currentRotation = transform.rotation.eulerAngles.z;
         if (currentRotation < 275)
             transform.Rotate(0, 0, 5);
     }
 
+    private void Die() {
+        inGame = false;
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+        GetComponent<AudioSource>().PlayOneShot(deathClip);
+        GameManager.Instance.PlayerLost();
+    }
+
+    private void Win(int multiplier) {
+        inGame = false;
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+        GetComponent<AudioSource>().PlayOneShot(winClip);
+        GameManager.Instance.PlayerWon(multiplier);
+    }
+
     private void OnTriggerEnter(Collider other) {
         bool isTerrain = other.gameObject.layer == 0 || other.gameObject.layer == 4;
-        bool isMultiplier = other.gameObject.GetComponent<ScoreMultiplier>()!=null;
+        bool isMultiplier = other.gameObject.GetComponent<ScoreMultiplier>() != null;
 
         if (isTerrain)
             grounded = true;
@@ -118,20 +132,6 @@ public class PlayerBehaviour : MonoBehaviour{
         if (isMultiplier && inGame)
             Win(other.gameObject.GetComponent<ScoreMultiplier>().GetMultiplier());
 
-    }
-
-
-
-    private void Die() {
-        inGame = false;
-        rb.constraints = RigidbodyConstraints.FreezeAll;
-        GameManager.Instance.PlayerLost();
-    }
-
-    private void Win(int multiplier) {
-        inGame = false;
-        rb.constraints = RigidbodyConstraints.FreezeAll;
-        GameManager.Instance.PlayerWon(multiplier);
     }
 
     private void OnTriggerExit(Collider other) {
