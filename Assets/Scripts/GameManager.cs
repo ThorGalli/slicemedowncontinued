@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
     [SerializeField] GameObject player;
     [SerializeField] Transform gameDetails;
-    [SerializeField] GameObject scoreIndicator;
+    [SerializeField] GameObject canvas;
     private int highScore;
     string level;
     private static GameManager _instance;
@@ -68,7 +68,8 @@ public class GameManager : MonoBehaviour {
     public void EndGame() {
         ManageHighScore();
         gameDetails.gameObject.SetActive(true);
-        scoreIndicator.gameObject.SetActive(false);
+        canvas.transform.Find("ScoreIndicator").gameObject.SetActive(false);
+        canvas.transform.Find("JumpButton").gameObject.SetActive(false);
     }
 
     private void ManageHighScore() {
