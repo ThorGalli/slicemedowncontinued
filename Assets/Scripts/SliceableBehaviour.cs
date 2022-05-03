@@ -22,7 +22,7 @@ public class SliceableBehaviour : MonoBehaviour {
     }
 
     public void Cut() {
-        GameManager.Instance.addPoint();
+        GameManager.Instance.AddPoint();
         leftHalf.SetActive(true);
         leftHalf.GetComponent<Rigidbody>().AddForce(cutForce);
         rightHalf.SetActive(true);
