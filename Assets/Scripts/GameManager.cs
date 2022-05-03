@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour {
         TextMeshProUGUI endGameMessage = gameDetails.Find("EndGameMessage").transform.GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI multiplierMessage = gameDetails.Find("MultiplierMessage").transform.GetComponent<TextMeshProUGUI>();
         Image bgImage = gameDetails.Find("BackGroundImage").GetComponent<Image>();
+
         multiplierMessage.text = "("+m.ToString() + " x " + points.ToString()+")";
         endGameMessage.text = "YOU WIN!";
 
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour {
     public void PlayerLost() {
         TextMeshProUGUI endGameMessage = gameDetails.Find("EndGameMessage").transform.GetComponent<TextMeshProUGUI>();
         Image bgImage = gameDetails.Find("BackGroundImage").GetComponent<Image>();
+
         endGameMessage.text = "YOU LOSE!";
         endGameMessage.color = Color.red;
 

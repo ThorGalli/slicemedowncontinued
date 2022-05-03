@@ -1,12 +1,14 @@
 
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HighScore : MonoBehaviour {
     private string level;
 
     private void OnEnable() {
-        level = GameManager.Instance.GetLevel();
+        level = SceneManager.GetActiveScene().name;
+        Debug.Log(level);
     }
 
     void Update()

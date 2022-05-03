@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuScripts : MonoBehaviour{
-    public void LoadGame() {
-        SceneManager.LoadScene("Prototype");
+    public void ReloadGame() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void LoadMenu() {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene(0);
     }
 }
