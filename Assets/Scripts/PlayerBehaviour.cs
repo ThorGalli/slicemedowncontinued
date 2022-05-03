@@ -27,10 +27,7 @@ public class PlayerBehaviour : MonoBehaviour{
         blade = gameObject.transform.Find("Blade").gameObject;
     }
 
-    private void Update() {
-        if (inGame) 
-            HandleInput(); 
-    }
+
     private void FixedUpdate() {
         if (inGame) 
         UpdateCustomPhysics();
@@ -44,8 +41,8 @@ public class PlayerBehaviour : MonoBehaviour{
     }
 
     private void SimulateCeiling() {
-        if (transform.position.y >= 9) 
-            rb.AddForce(new Vector3(-horizontalForce,-jumpForce,0));
+        if (transform.position.y >= 13)
+            rb.velocity = -rb.velocity;
     }
 
     private void Stick() {
@@ -60,20 +57,16 @@ public class PlayerBehaviour : MonoBehaviour{
         rb.velocity = rb.velocity.y <= -gravityCap ? new Vector3(rb.velocity.x, -gravityCap, rb.velocity.z) : rb.velocity;
     }
 
-    void HandleInput() {
-        bool justTouched = Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began;
 
-        if (Input.GetButtonDown("Fire1")||justTouched) 
-            Jump();
-    }
-
-    private void Jump() {
-        rb.velocity = Vector3.zero;
-        rb.AddForce(new Vector3(horizontalForce, jumpForce, 0));
-        jumpRoll = true;
-        jumpCount = 180;
-        GetComponent<AudioSource>().Play();
-        blade.GetComponent<CapsuleCollider>().enabled = false;
+    public void Jump() {
+        if (inGame) {
+            rb.velocity = Vector3.zero;
+            rb.AddForce(new Vector3(horizontalForce, jumpForce, 0));
+            jumpRoll = true;
+            jumpCount = 180;
+            GetComponent<AudioSource>().Play();
+            blade.GetComponent<CapsuleCollider>().enabled = false;
+        }
     }
 
     void Rotate() {
@@ -104,8 +97,8 @@ public class PlayerBehaviour : MonoBehaviour{
 
     public void justCut() {
         float currentRotation = transform.rotation.eulerAngles.z;
-        if (currentRotation < 275)
-            transform.Rotate(0, 0, 5);
+        if (currentRotation < 250)
+            transform.Rotate(0, 0, 10);
     }
 
     private void Die() {
