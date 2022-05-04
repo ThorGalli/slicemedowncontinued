@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
     [SerializeField] GameObject player;
-    [SerializeField] Transform gameDetails;
-    [SerializeField] GameObject canvas;
+    [SerializeField] GameObject gameUI;
+    private Transform gameDetails;
+    private Transform canvas;
+
     private int highScore;
     string level;
     private static GameManager _instance;
@@ -23,10 +25,12 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Awake() {
-        points = 0;
         _instance = this;
+        points = 0;
         level = SceneManager.GetActiveScene().name;
         highScore = PlayerPrefs.GetInt("HighScore_" + level, 0);
+        canvas = gameUI.transform.Find("Canvas");
+        gameDetails = canvas.transform.Find("GameDetails");
     }
 
     public void AddPoint() {
@@ -43,8 +47,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void PlayerWon(int m) {
-        TextMeshProUGUI endGameMessage = gameDetails.Find("EndGameMessage").transform.GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI multiplierMessage = gameDetails.Find("MultiplierMessage").transform.GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI endGameMessage = gameDetails.Find("EndGameMessage").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI multiplierMessage = gameDetails.Find("MultiplierMessage").GetComponent<TextMeshProUGUI>();
         Image bgImage = gameDetails.Find("BackGroundImage").GetComponent<Image>();
 
         multiplierMessage.text = "("+m.ToString() + " x " + points.ToString()+")";
@@ -52,11 +56,11 @@ public class GameManager : MonoBehaviour {
 
         points *= m;
         bgImage.color = new Color(.5f, 1, 0.4f, 0.5f);
-        canvas.transform.Find("GameDetails").Find("Next").gameObject.SetActive(true);
+        canvas.Find("GameDetails").Find("Next").gameObject.SetActive(true);
         EndGame();
     }
     public void PlayerLost() {
-        TextMeshProUGUI endGameMessage = gameDetails.Find("EndGameMessage").transform.GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI endGameMessage = gameDetails.Find("EndGameMessage").GetComponent<TextMeshProUGUI>();
         Image bgImage = gameDetails.Find("BackGroundImage").GetComponent<Image>();
 
         endGameMessage.text = "YOU LOSE!";
@@ -69,8 +73,9 @@ public class GameManager : MonoBehaviour {
     public void EndGame() {
         ManageHighScore();
         gameDetails.gameObject.SetActive(true);
-        canvas.transform.Find("ScoreIndicator").gameObject.SetActive(false);
-        canvas.transform.Find("JumpButton").gameObject.SetActive(false);
+        canvas.Find("ScoreIndicator").gameObject.SetActive(false);
+        canvas.Find("JumpButton").gameObject.SetActive(false);
+        canvas.Find("PauseButton").gameObject.SetActive(false);
     }
 
     private void ManageHighScore() {
