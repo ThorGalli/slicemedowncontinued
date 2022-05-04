@@ -8,7 +8,6 @@ public class HighScore : MonoBehaviour {
 
     private void OnEnable() {
         level = SceneManager.GetActiveScene().name;
-        Debug.Log(level);
     }
 
     void Update()

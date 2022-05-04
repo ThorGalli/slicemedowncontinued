@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour {
 
         points *= m;
         bgImage.color = new Color(.5f, 1, 0.4f, 0.5f);
+        canvas.transform.Find("GameDetails").Find("Next").gameObject.SetActive(true);
         EndGame();
     }
     public void PlayerLost() {

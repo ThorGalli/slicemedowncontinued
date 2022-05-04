@@ -7,6 +7,6 @@ public class ConstantRotation : MonoBehaviour
     [SerializeField] int Speed;
     void FixedUpdate()
     {
-        transform.Rotate(new Vector3(Speed,0,0));
+        transform.Rotate(new Vector3(0,0,Speed));
     }
 }
