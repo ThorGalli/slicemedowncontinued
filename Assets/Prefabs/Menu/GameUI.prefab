@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 4690681162558657180}
   - component: {fileID: 5127286014362665043}
   - component: {fileID: 8060209070147488292}
+  - component: {fileID: 4034448255019754922}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -401,18 +402,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1456790183237384604}
-        m_TargetAssemblyTypeName: UIClickSound, Assembly-CSharp
-        m_MethodName: PlayPop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &4034448255019754922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260460597943296527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe325f45479a9ce4997c57e138391c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 0}
 --- !u!1 &887772174946688254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1048,7 @@ RectTransform:
   - {fileID: 603944684240788132}
   - {fileID: 1472616626762476583}
   m_Father: {fileID: 1472616627467583143}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1217,7 +1219,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1456790183237384605}
   - {fileID: 1472616626960413764}
   - {fileID: 1472616628186831234}
   m_Father: {fileID: 0}
@@ -1247,6 +1248,7 @@ GameObject:
   - component: {fileID: 1472616627618888600}
   - component: {fileID: 1472616627618888601}
   - component: {fileID: 1472616627618888602}
+  - component: {fileID: 1430514981209818784}
   m_Layer: 5
   m_Name: PauseButton
   m_TagString: Untagged
@@ -1403,18 +1405,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1456790183237384604}
-        m_TargetAssemblyTypeName: UIClickSound, Assembly-CSharp
-        m_MethodName: PlayPop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &1430514981209818784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472616627618888604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe325f45479a9ce4997c57e138391c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 0}
 --- !u!1 &1472616627973580996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,7 +1806,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1472616627467583143}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1472616628186831232
 MonoBehaviour:
@@ -2573,6 +2576,7 @@ GameObject:
   - component: {fileID: 806035182959312770}
   - component: {fileID: 7564978512649902130}
   - component: {fileID: 2614432743090340382}
+  - component: {fileID: 7130818731221567717}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -2694,18 +2698,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1456790183237384604}
-        m_TargetAssemblyTypeName: UIClickSound, Assembly-CSharp
-        m_MethodName: PlayBackPop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &7130818731221567717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4897770289775952878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe325f45479a9ce4997c57e138391c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 0}
 --- !u!1 &6496874814063485168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,6 +2723,7 @@ GameObject:
   - component: {fileID: 2074627754085438906}
   - component: {fileID: 3890419603445685872}
   - component: {fileID: 1363815285224696100}
+  - component: {fileID: 5086305854826032280}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -2839,18 +2845,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1456790183237384604}
-        m_TargetAssemblyTypeName: UIClickSound, Assembly-CSharp
-        m_MethodName: PlayPop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &5086305854826032280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496874814063485168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe325f45479a9ce4997c57e138391c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 29f150a8af40c5d4ca816833009de958, type: 3}
 --- !u!1 &7259647536047737634
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,6 +3016,7 @@ GameObject:
   - component: {fileID: 833148882812241845}
   - component: {fileID: 1756190525753467057}
   - component: {fileID: 687119319285639626}
+  - component: {fileID: 7537293998080837874}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -3130,18 +3138,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1456790183237384604}
-        m_TargetAssemblyTypeName: UIClickSound, Assembly-CSharp
-        m_MethodName: PlayPop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &7537293998080837874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964615738971090548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe325f45479a9ce4997c57e138391c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 0}
 --- !u!1 &8092319874571542799
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,6 +3163,7 @@ GameObject:
   - component: {fileID: 7210355477117547086}
   - component: {fileID: 5289121637393430068}
   - component: {fileID: 6087957399831379068}
+  - component: {fileID: 4076357183979957989}
   m_Layer: 5
   m_Name: GiveUp
   m_TagString: Untagged
@@ -3275,18 +3285,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1456790183237384604}
-        m_TargetAssemblyTypeName: UIClickSound, Assembly-CSharp
-        m_MethodName: PlayBackPop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &4076357183979957989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8092319874571542799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe325f45479a9ce4997c57e138391c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 29f150a8af40c5d4ca816833009de958, type: 3}
 --- !u!1 &8546286675109208319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,6 +3385,7 @@ GameObject:
   - component: {fileID: 1393766160678161385}
   - component: {fileID: 5934427477847545460}
   - component: {fileID: 5523063441187370833}
+  - component: {fileID: 5125098593015594579}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -3495,18 +3507,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1456790183237384604}
-        m_TargetAssemblyTypeName: UIClickSound, Assembly-CSharp
-        m_MethodName: PlayBackPop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 2393185653576612182}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3543,76 +3543,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!1001 &1815241637960833727
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1472616627467583143}
-    m_Modifications:
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 938585263326929701, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-      propertyPath: m_Name
-      value: UISounds
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
---- !u!4 &1456790183237384605 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 938585263326929698, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-  m_PrefabInstance: {fileID: 1815241637960833727}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1456790183237384604 stripped
+--- !u!114 &5125098593015594579
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 938585263326929699, guid: 8b40c7589a747534486e696acb2e7ba9, type: 3}
-  m_PrefabInstance: {fileID: 1815241637960833727}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8843581413922104957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18c99921ac0a0924cb089805e3454991, type: 3}
+  m_Script: {fileID: 11500000, guid: fe325f45479a9ce4997c57e138391c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 29f150a8af40c5d4ca816833009de958, type: 3}
