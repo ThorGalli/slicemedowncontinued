@@ -31,4 +31,8 @@ public class MenuScripts : MonoBehaviour{
     public void ResumeGame() {
         Time.timeScale = 1;
     }
+
+    public void ResetSave() {
+        PlayerPrefs.DeleteAll();
+    }
 }
